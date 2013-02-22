@@ -1,1 +1,4 @@
-Content\spritesheets\maptiles.xnb
+Content\images\spritesheets\maptiles.xnb
+Content\images\player.xnb
+Content\images\map.xnb
+Content\ColorPalette.xnb

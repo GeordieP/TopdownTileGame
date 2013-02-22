@@ -12,12 +12,12 @@ using Microsoft.Xna.Framework.Media;
 namespace FinalProjectPrototype {
     public class SpriteSheet {
 
-        Texture2D mapTiles;
+        public Texture2D mapTiles;          // TODO: Make this private after not using it to draw debug rect
         GraphicsDevice graphicsDevice;
 
         public SpriteSheet(ContentManager Content, GraphicsDevice graphicsDevice) {
             this.graphicsDevice = graphicsDevice;
-            mapTiles = Content.Load<Texture2D>("spritesheets/mapTiles");
+            mapTiles = Content.Load<Texture2D>("images/spritesheets/mapTiles");
         }
 
         public Texture2D GetTile(int x, int y, int w, int h) {
