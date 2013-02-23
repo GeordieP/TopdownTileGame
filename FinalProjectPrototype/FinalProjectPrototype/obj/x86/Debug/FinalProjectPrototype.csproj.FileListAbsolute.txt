@@ -8,3 +8,4 @@ D:\School\GAME 120 - Programming\Visual Studio 2012\Projects\FinalProjectPrototy
 D:\School\GAME 120 - Programming\Visual Studio 2012\Projects\FinalProjectPrototype\FinalProjectPrototype\FinalProjectPrototype\bin\x86\Debug\Content\images\player.xnb
 D:\School\GAME 120 - Programming\Visual Studio 2012\Projects\FinalProjectPrototype\FinalProjectPrototype\FinalProjectPrototype\bin\x86\Debug\Content\images\map.xnb
 D:\School\GAME 120 - Programming\Visual Studio 2012\Projects\FinalProjectPrototype\FinalProjectPrototype\FinalProjectPrototype\bin\x86\Debug\Content\ColorPalette.xnb
+D:\School\GAME 120 - Programming\Visual Studio 2012\Projects\FinalProjectPrototype\FinalProjectPrototype\FinalProjectPrototype\bin\x86\Debug\Content\images\map1.xnb

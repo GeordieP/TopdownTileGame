@@ -1,0 +1,23 @@
+﻿> is bugfix, + is new feature, - is feature removal
+
+##### Priority ####
+
+> Fix Map Scrolling (again)
+	> (Possible) cause: If on edge of centerBox and moving map (eg: upwards) and press other direction (left/right), first direction (up) gets disabled
+		> Otherwise key disabling happens randomly after scrolling map in a direction --- this seems to be the case
+
++ Collidable tile to get collisions implemented - or use water tile
++ Scenery objects (buildings, etc)
++ Item pickups
++ Inventory system
++ Multiple map environments
++ NPCs, Mobs
+
+##### Polishing Stage #####
+
++ Randomizing textures of tiles - already crudely implemented with stone
++ Loading Screen (?)
++ Menus (?)
+
+#### Ideas (Undecided) ####
++ Slight Terrain Randomization

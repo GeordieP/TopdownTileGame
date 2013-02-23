@@ -11,6 +11,7 @@ using Microsoft.Xna.Framework.Media;
 
 namespace FinalProjectPrototype {
     public class World {
+        Player player;      // allow direct communication between player and map
 
         short mapImageWidth, mapImageHeight;        // width and height of the map layout image
         private Texture2D mapLayoutImage;
@@ -24,7 +25,9 @@ namespace FinalProjectPrototype {
         const float SCROLL_SPEED = 4f;  // should be the same as player's walk speed (player's max velocity)
             // TODO: set scroll speed to player's max velocity once map and player can directly communicate
 
-        public World(ContentManager content) {
+        public World(ContentManager content, Player player) {
+            this.player = player;
+
             mapLayoutImage = content.Load<Texture2D>("images/map");
 
             // map image width and height - used to determine size of arrays
@@ -71,6 +74,9 @@ namespace FinalProjectPrototype {
                         foreach (Tile t in tileMap) {
                             t.destination.Y += SCROLL_SPEED;
                         }
+                        canMapScroll = true;
+                    } else {
+                        canMapScroll = false;
                     }
                     break;
                 case Util.DOWN:
@@ -78,6 +84,9 @@ namespace FinalProjectPrototype {
                         foreach (Tile t in tileMap) {
                             t.destination.Y -= SCROLL_SPEED;
                         }
+                        canMapScroll = true;
+                    } else {
+                        canMapScroll = false;
                     }
                     break;
                 case Util.LEFT:
@@ -85,6 +94,9 @@ namespace FinalProjectPrototype {
                         foreach (Tile t in tileMap) {
                             t.destination.X += SCROLL_SPEED;
                         }
+                        canMapScroll = true;
+                    } else {
+                        canMapScroll = false;
                     }
                     break;
                 case Util.RIGHT:
@@ -92,14 +104,15 @@ namespace FinalProjectPrototype {
                         foreach (Tile t in tileMap) {
                             t.destination.X -= SCROLL_SPEED;
                         }
+                        canMapScroll = true;
+                    } else {
+                        canMapScroll = false;
                     }
                     break;
             }
         }
 
-        public void Update(GameTime gameTime) {
-            
-        }
+        public void Update(GameTime gameTime) { }
 
         public void Draw(SpriteBatch spriteBatch) {
             foreach (Tile t in tileMap) {

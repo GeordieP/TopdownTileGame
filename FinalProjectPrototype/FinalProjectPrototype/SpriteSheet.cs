@@ -11,7 +11,6 @@ using Microsoft.Xna.Framework.Media;
 
 namespace FinalProjectPrototype {
     public class SpriteSheet {
-
         public Texture2D mapTiles;          // TODO: Make this private after not using it to draw debug rect
         GraphicsDevice graphicsDevice;
 

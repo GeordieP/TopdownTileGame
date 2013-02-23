@@ -11,10 +11,11 @@ using Microsoft.Xna.Framework.Media;
 
 namespace FinalProjectPrototype {
     public class Tile{
-
         public byte type;
         public Texture2D texture;
         public Vector2 destination;
+
+        Random random = new Random();
 
         public Color GRASS_GREEN = new Color(57, 124, 48, 255);
         public Color DIRT_BROWN = new Color(150, 64, 0, 255);
@@ -44,7 +45,15 @@ namespace FinalProjectPrototype {
                     texture = Game1.mapTileSheet.GetTile(1 * 64, 0 * 64, 64, 64);
                     break;
                 case Util.TILE_STONE:
-                    texture = Game1.mapTileSheet.GetTile(2 * 64, 0 * 64, 64, 64);
+                    int temp = random.Next(1, 3);
+                    switch(temp){
+                        case 1:
+                            texture = Game1.mapTileSheet.GetTile(2 * 64, 0 * 64, 64, 64);
+                            break;
+                        case 2:
+                            texture = Game1.mapTileSheet.GetTile(2 * 64, 1 * 64, 64, 64);
+                            break;
+                    }
                     break;
                 case Util.TILE_WATER:
                     texture = Game1.mapTileSheet.GetTile(3 * 64, 0 * 64, 64, 64);
